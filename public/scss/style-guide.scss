@@ -1,0 +1,85 @@
+@import "partials/reset";
+@import "partials/prefix-mixins";
+@import "partials/layout"; // responsive grid and media queries
+
+// color palette - these colors will be the color swatches of the Colors section
+
+$color-1: #60463b; // dark brown
+$color-2: #77867f; // olive green
+$color-3: #ddd78d; // yellow
+$color-4: #002e2c; // dark green
+$color-5: #ffffff; // white
+
+// additional colors
+
+$success: #6fce72; // green
+$alert: $color-3; // yellow
+
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+@import "partials/typography";
+
+/* -------------------------------- 
+
+xBackground 
+
+-------------------------------- */
+
+body {
+  /* this is the page background */
+  background-color: $color-2;
+}
+
+/* -------------------------------- 
+
+xPatterns
+
+-------------------------------- */
+
+.cd-box {
+  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  border: 1px solid $color-4;
+  border-radius: 3px;
+  background: $color-5;
+  box-shadow: 0 1px 1px rgba(#000, 0.05);
+  padding: 6px;
+}
+
+/* -------------------------------- 
+
+xNavigation 
+
+-------------------------------- */
+@import "partials/navigation";
+
+/* -------------------------------- 
+
+xPage title 
+
+-------------------------------- */
+
+main > h1 {
+  color: $color-4;
+
+  @include MQ(L) {
+    /* title goes into the header on big devices */
+    color: $color-4;
+  }
+}
+
+/* -------------------------------- 
+
+xButtons 
+
+-------------------------------- */
+@import "partials/button";
+
+/* -------------------------------- 
+
+xBasic-style 
+
+-------------------------------- */
+@import "partials/basic-style";
