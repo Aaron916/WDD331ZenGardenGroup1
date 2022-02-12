@@ -492,7 +492,12 @@ section {
     content: "";
     display: block; }
   section:nth-of-type(1) h2::before {
-    content: '1. '; }
+    background-image: url(https://freesvg.org/img/Raseone_Horseshoe.png);
+    background-size: 50px 50px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    content: ""; }
   section:nth-of-type(2) h2::before {
     content: '2. '; }
   section:nth-of-type(3) h2::before {
