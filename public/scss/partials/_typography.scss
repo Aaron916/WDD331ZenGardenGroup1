@@ -1,7 +1,9 @@
 //Typography
 // fonts
-$primary-font: "Merriweather", serif;
-$secondary-font: "Open Sans", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
+$primary-font: 'Alegreya Sans SC', sans-serif;
+$secondary-font: 'Rye', cursive;
 
 h1,
 h2 {
