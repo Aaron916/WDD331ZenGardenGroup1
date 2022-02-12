@@ -63,6 +63,8 @@ header {
 	}
 }
 
+// centering and spacing most of our sections, right margin to avoid sidebar overlap
+
 .intro, .supporting, .preamble, .explanation, .participation, .benefits, .requirements {
 	display:flex;
 	flex-direction: column;
@@ -75,10 +77,12 @@ header {
 	}
 }
 
+// avoiding overlap with header, should be changed based on MQ
 .summary {
 	margin-top: 240px;
 }
 
+// floating sidebar
 .sidebar {
 	position:fixed;
 	right:50px;
