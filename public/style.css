@@ -108,6 +108,10 @@ body {
   /* this is the page background */
   background-color: #77867f; }
 
+.page-wrapper {
+  background-image: url(/scss/assets/images/paisley7.jpg);
+  mix-blend-mode: overlay; }
+
 /* -------------------------------- 
 
 xPatterns
@@ -255,6 +259,11 @@ header {
     position: absolute;
     bottom: 0;
     text-shadow: 2px 2px #002e2c; }
+  header h3 {
+    color: #002e2c;
+    font-weight: 900;
+    margin-top: 15px;
+    margin-bottom: 5px; }
   header nav {
     display: inline-block; }
   @media only screen and (min-width: 1024px) {

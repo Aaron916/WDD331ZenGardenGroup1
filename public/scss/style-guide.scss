@@ -30,9 +30,11 @@ xBackground
 
 body {
   /* this is the page background */
-  //background-image: url(scss/assets/images/paisley.jpg);
-  //opacity: 5%;
   background-color: $color-2;
+}
+.page-wrapper {
+  background-image: url(/scss/assets/images/paisley7.jpg);
+  mix-blend-mode: overlay;
 }
 
 /* -------------------------------- 
