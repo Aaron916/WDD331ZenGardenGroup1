@@ -61,6 +61,13 @@ header {
     text-shadow: 2px 2px $color-4;
   }
 
+  h3 {
+    color: $color-4;
+    font-weight: 900;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
   nav {
     display: inline-block;
   }
