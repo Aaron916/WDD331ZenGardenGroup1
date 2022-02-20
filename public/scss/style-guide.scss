@@ -32,9 +32,11 @@ body {
   /* this is the page background */
   background-color: $color-2;
 }
+
 .page-wrapper {
-  background-image: url(/scss/assets/images/paisley7.jpg);
-  mix-blend-mode: overlay;
+  background-image: url(/scss/assets/images/paisley8.jpg);
+  //opacity: 0.3;
+  //mix-blend-mode: overlay;
 }
 
 /* -------------------------------- 
@@ -86,4 +88,5 @@ xButtons
 xBasic-style 
 
 -------------------------------- */
+
 @import "partials/basic-style";

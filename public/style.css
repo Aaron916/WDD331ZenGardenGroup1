@@ -80,8 +80,9 @@ h2 {
       margin: 1em 0 1.4em; } }
 
 h3 {
-  color: #ddd78d;
-  margin-bottom: 15px; }
+  color: #002e2c;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem; }
 
 section > h2::before {
   /* number before each section title */
@@ -109,8 +110,7 @@ body {
   background-color: #77867f; }
 
 .page-wrapper {
-  background-image: url(/scss/assets/images/paisley7.jpg);
-  mix-blend-mode: overlay; }
+  background-image: url(/scss/assets/images/paisley8.jpg); }
 
 /* -------------------------------- 
 
@@ -227,7 +227,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Alegreya Sans SC", sans-serif; }
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: bolder; }
 
 a {
   text-decoration: none; }
@@ -254,16 +255,12 @@ header {
   align-items: center;
   justify-content: center; }
   header h1 {
-    text-shadow: 3px 3px #002e2c; }
+    text-shadow: 3px 5px #002e2c;
+    -webkit-text-stroke: 1px black; }
   header h2 {
     position: absolute;
     bottom: 0;
-    text-shadow: 2px 2px #002e2c; }
-  header h3 {
-    color: #002e2c;
-    font-weight: 900;
-    margin-top: 15px;
-    margin-bottom: 5px; }
+    -webkit-text-stroke: 0.25px black; }
   header nav {
     display: inline-block; }
   @media only screen and (min-width: 1024px) {

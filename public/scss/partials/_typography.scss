@@ -1,9 +1,9 @@
 //Typography
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
-$primary-font: 'Alegreya Sans SC', sans-serif;
-$secondary-font: 'Rye', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap");
+$primary-font: "Alegreya Sans SC", sans-serif;
+$secondary-font: "Rye", cursive;
 
 h1,
 h2,
@@ -39,8 +39,9 @@ h2 {
 }
 
 h3 {
-  color: $color-3;
-  margin-bottom: 15px;
+  color: $color-4;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 section > h2::before {
