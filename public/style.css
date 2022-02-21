@@ -110,7 +110,7 @@ body {
   background-color: #77867f; }
 
 .page-wrapper {
-  background-image: url(/scss/assets/images/paisley8.jpg); }
+  background-image: url(/scss/assets/images/paisley9.jpg); }
 
 /* -------------------------------- 
 
@@ -130,9 +130,6 @@ xPatterns
 xNavigation 
 
 -------------------------------- */
-header {
-  background-image: url(scss/assets/images/leather.jpg); }
-
 .cd-logo {
   /* logo box style */
   background-color: #60463b;
@@ -253,7 +250,10 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background-image: url(scss/assets/images/zg.svg), url(scss/assets/images/leather.jpg);
+  background-repeat: no-repeat;
+  border-bottom: solid 5px #002e2c; }
   header h1 {
     text-shadow: 3px 5px #002e2c;
     -webkit-text-stroke: 1px black; }

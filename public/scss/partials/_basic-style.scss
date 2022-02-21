@@ -39,7 +39,9 @@ select {
   font-family: $primary-font;
   font-size: 1.6rem;
 }
-
+//header header::before {
+//  background-image: url(scss/assets/images/zg.svg);
+//}
 header {
   position: fixed;
   height: 50px;
@@ -52,6 +54,10 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url(scss/assets/images/zg.svg),
+    url(scss/assets/images/leather.jpg);
+  background-repeat: no-repeat;
+  border-bottom: solid 5px $color-4;
 
   h1 {
     text-shadow: 3px 5px $color-4;
