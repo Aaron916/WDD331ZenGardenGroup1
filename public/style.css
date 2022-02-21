@@ -240,7 +240,11 @@ select {
   font-size: 1.6rem; }
 
 header::before {
-  content: url(scss/assets/images/zg.svg); }
+  content: url(scss/assets/images/zg.svg);
+  position: relative;
+  width: 5em;
+  top: 23%;
+  z-index: -1; }
 
 header {
   position: fixed;
@@ -254,7 +258,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(scss/assets/images/zg.svg), url(scss/assets/images/leather.jpg);
+  background-image: url(scss/assets/images/leather.jpg);
   background-repeat: no-repeat;
   border-bottom: solid 5px #002e2c; }
   header h1 {
@@ -273,6 +277,12 @@ header {
         clear: both;
         content: "";
         display: block; } }
+
+.intro::before {
+  content: url(scss/assets/images/cowboyhat.png);
+  position: relative;
+  right: 30%;
+  transform: scale(0.2); }
 
 .intro,
 .supporting,

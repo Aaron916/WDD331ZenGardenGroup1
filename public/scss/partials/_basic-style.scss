@@ -41,6 +41,10 @@ select {
 }
 header::before {
   content: url(scss/assets/images/zg.svg);
+  position: relative;
+  width: 5em;
+  top: 23%;
+  z-index: -1;
 }
 header {
   position: fixed;
@@ -54,8 +58,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(scss/assets/images/zg.svg),
-    url(scss/assets/images/leather.jpg);
+  background-image: url(scss/assets/images/leather.jpg);
   background-repeat: no-repeat;
   border-bottom: solid 5px $color-4;
 
@@ -79,6 +82,13 @@ header {
     @include clearfix;
   }
 }
+
+// header::after {
+//  content: url(scss/assets/images/cowboyhat.png);
+//  position: relative;
+//  right: 30%;
+//  transform: scale(0.2);
+//}
 
 // centering and spacing most of our sections, right margin to avoid sidebar overlap
 
