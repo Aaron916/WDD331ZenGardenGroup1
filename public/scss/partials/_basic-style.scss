@@ -39,9 +39,9 @@ select {
   font-family: $primary-font;
   font-size: 1.6rem;
 }
-//header header::before {
-//  background-image: url(scss/assets/images/zg.svg);
-//}
+header::before {
+  content: url(scss/assets/images/zg.svg);
+}
 header {
   position: fixed;
   height: 50px;

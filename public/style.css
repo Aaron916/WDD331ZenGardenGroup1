@@ -239,6 +239,9 @@ select {
   font-family: "Alegreya Sans SC", sans-serif;
   font-size: 1.6rem; }
 
+header::before {
+  content: url(scss/assets/images/zg.svg); }
+
 header {
   position: fixed;
   height: 50px;
