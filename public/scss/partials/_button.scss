@@ -21,18 +21,18 @@
   }
 
   &.btn-success {
-    background: $success;
+    background: $color-1;
 
     .no-touch &:hover {
-      background: lighten($success, 5%);
+      background: lighten($color-1, 5%);
     }
   }
 
   &.btn-alert {
-    background: $alert;
+    background: $color-3;
 
     .no-touch &:hover {
-      background: lighten($alert, 5%);
+      background: lighten($color-3, 5%);
     }
   }
 

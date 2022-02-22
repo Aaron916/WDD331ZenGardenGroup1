@@ -10,24 +10,14 @@ $color-3: #ddd78d; // yellow
 $color-4: #002e2c; // dark green
 $color-5: #ffffff; // white
 
-// additional colors
-
-$success: #6fce72; // green
-$alert: $color-3; // yellow
-
 /* -------------------------------- 
-
 xTypography 
-
 -------------------------------- */
 @import "partials/typography";
 
 /* -------------------------------- 
-
 xBackground 
-
 -------------------------------- */
-
 body {
   /* this is the page background */
   background-color: $color-2;
@@ -40,11 +30,8 @@ body {
 }
 
 /* -------------------------------- 
-
 xPatterns
-
 -------------------------------- */
-
 .cd-box {
   /* this is the container of various design elements - i.e. the 2 logo of the branding section */
   border: 1px solid $color-4;
@@ -55,18 +42,13 @@ xPatterns
 }
 
 /* -------------------------------- 
-
 xNavigation 
-
 -------------------------------- */
 @import "partials/navigation";
 
 /* -------------------------------- 
-
 xPage title 
-
 -------------------------------- */
-
 main > h1 {
   color: $color-4;
 
@@ -77,16 +59,11 @@ main > h1 {
 }
 
 /* -------------------------------- 
-
 xButtons 
-
 -------------------------------- */
 @import "partials/button";
 
 /* -------------------------------- 
-
 xBasic-style 
-
 -------------------------------- */
-
 @import "partials/basic-style";
