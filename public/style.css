@@ -263,6 +263,9 @@ header {
         content: "";
         display: block; } }
 
+#css-zen-garden {
+  background-image: url(../assets/Images/Background.png); }
+
 .intro,
 .supporting,
 .preamble,
