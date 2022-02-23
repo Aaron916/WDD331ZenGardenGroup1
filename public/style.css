@@ -106,7 +106,7 @@ body {
   background-color: #77867f; }
 
 .page-wrapper {
-  background-image: url(/scss/assets/images/paisley9.jpg); }
+  background-image: url(./assets/Images/Background.png); }
 
 /* -------------------------------- 
 xPatterns
@@ -262,9 +262,6 @@ header {
         clear: both;
         content: "";
         display: block; } }
-
-#css-zen-garden {
-  background-image: url(../assets/Images/Background.png); }
 
 .intro,
 .supporting,
