@@ -1,24 +1,22 @@
-// breakpoints
+// breakpoint
 
-$S: 48em; //768px w/base pixel size 16
-$M: 64em; //1024px
-$L: 100em; //1600px
+$L: 48em; //768px w/base pixel size 16
+$display-max-width: 1350px;
 
 // media queries
-
 @mixin MQ($canvas) {
-  @if $canvas == S {
-    @media only screen and (min-width: $S) {
-      @content;
-    }
-  } @else if $canvas == M {
-    @media only screen and (min-width: $M) {
-      @content;
-    }
-  } @else if $canvas == L {
+  @if $canvas == L {
     @media only screen and (min-width: $L) {
       @content;
     }
+    //  } @else if $canvas == M {
+    //    @media only screen and (min-width: $M) {
+    //      @content;
+    //    }
+    //  } @else if $canvas == L {
+    //    @media only screen and (min-width: $L) {
+    //      @content;
+    //    }
   }
 }
 

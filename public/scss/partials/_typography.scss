@@ -18,11 +18,11 @@ h1 {
   line-height: 1.2;
   margin: 0 0 0.4em;
 
-  @include MQ(S) {
-    font-size: 3.2rem;
-  }
+  //  @include MQ(S) {
+  //    font-size: 3.2rem;
+  //  }
 
-  @include MQ(M) {
+  @include MQ(L) {
     font-size: 4rem;
   }
 }
@@ -32,16 +32,17 @@ h2 {
   text-transform: uppercase;
   margin: 1em 0;
 
-  @include MQ(S) {
-    font-size: 1.8rem;
-    margin: 1em 0 1.4em;
-  }
+  //  @include MQ(S) {
+  //    font-size: 1.8rem;
+  //    margin: 1em 0 1.4em;
+  //  }
 }
-
 h3 {
   color: $color-3;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  font-weight: 300;
+  font-size: 1.5em;
+  text-align: left;
+  margin: 0.5rem 0 1rem 1rem;
 }
 
 section > h2::before {
@@ -52,6 +53,7 @@ section > h2::before {
 p {
   font-size: 1.4rem;
   line-height: 1.4;
+  margin-left: 1rem;
   color: black;
 
   a {
@@ -59,8 +61,8 @@ p {
     text-decoration: underline;
   }
 
-  @include MQ(S) {
-    font-size: 1.6rem;
-    line-height: 1.6;
-  }
+  //  @include MQ(S) {
+  //    font-size: 1.6rem;
+  //    line-height: 1.6;
+  //  }
 }

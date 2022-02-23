@@ -63,24 +63,19 @@ h1 {
   margin: 0 0 0.4em; }
   @media only screen and (min-width: 48em) {
     h1 {
-      font-size: 3.2rem; } }
-  @media only screen and (min-width: 64em) {
-    h1 {
       font-size: 4rem; } }
 
 h2 {
   font-weight: bold;
   text-transform: uppercase;
   margin: 1em 0; }
-  @media only screen and (min-width: 48em) {
-    h2 {
-      font-size: 1.8rem;
-      margin: 1em 0 1.4em; } }
 
 h3 {
   color: #ddd78d;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem; }
+  font-weight: 300;
+  font-size: 1.5em;
+  text-align: left;
+  margin: 0.5rem 0 1rem 1rem; }
 
 section > h2::before {
   /* number before each section title */
@@ -89,14 +84,11 @@ section > h2::before {
 p {
   font-size: 1.4rem;
   line-height: 1.4;
+  margin-left: 1rem;
   color: black; }
   p a {
     color: #60463b;
     text-decoration: underline; }
-  @media only screen and (min-width: 48em) {
-    p {
-      font-size: 1.6rem;
-      line-height: 1.6; } }
 
 /* -------------------------------- 
 xBackground 
@@ -126,9 +118,6 @@ xNavigation
   /* logo box style */
   background-color: #60463b;
   width: 120px; }
-  @media only screen and (min-width: 64em) {
-    .cd-logo {
-      width: 180px; } }
 
 a {
   color: #002e2c; }
@@ -141,7 +130,7 @@ xPage title
 -------------------------------- */
 main > h1 {
   color: #002e2c; }
-  @media only screen and (min-width: 100em) {
+  @media only screen and (min-width: 48em) {
     main > h1 {
       /* title goes into the header on big devices */
       color: #002e2c; } }
@@ -178,9 +167,6 @@ xButtons
     .no-touch .btn.btn-outline:hover {
       color: #ffffff;
       background: #60463b; }
-  @media only screen and (min-width: 48em) {
-    .btn {
-      font-size: 1.6rem; } }
 
 .cd-buttons .cd-box:nth-of-type(2) span {
   /* CSS class name color */
@@ -206,12 +192,16 @@ html * {
   -moz-osx-font-smoothing: grayscale; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  max-width: 1350px; }
 
 body {
   font-size: 1.6rem;
   font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: bolder; }
+  font-weight: bolder;
+  max-width: 1350px;
+  margin: 0 auto;
+  float: none; }
 
 a {
   text-decoration: none; }
@@ -255,13 +245,12 @@ header {
     -webkit-text-stroke: 0.25px black; }
   header nav {
     display: inline-block; }
-  @media only screen and (min-width: 64em) {
-    header {
-      height: 240px; }
-      header::after {
-        clear: both;
-        content: "";
-        display: block; } }
+
+header::after {
+  content: url(scss/assets/images/cowboyhat.png);
+  position: relative;
+  right: 30%;
+  transform: scale(0.1); }
 
 .intro,
 .supporting,
@@ -270,12 +259,26 @@ header {
 .participation,
 .benefits,
 .requirements {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin-bottom: 15px;
-  margin-right: 200px;
-  margin-left: 20px; }
+  display: block;
+  align-items: left;
+  margin-bottom: 15px; }
+  @media only screen and (min-width: 48em) {
+    .intro,
+    .supporting,
+    .preamble,
+    .explanation,
+    .participation,
+    .benefits,
+    .requirements {
+      margin-right: 200px; } }
+  .intro h3,
+  .supporting h3,
+  .preamble h3,
+  .explanation h3,
+  .participation h3,
+  .benefits h3,
+  .requirements h3 {
+    text-align: left; }
   .intro p,
   .supporting p,
   .preamble p,
@@ -283,10 +286,7 @@ header {
   .participation p,
   .benefits p,
   .requirements p {
-    margin-bottom: 15px;
-    text-align: start;
-    margin-left: 20px; }
-
+    margin: 0 0 15px 15px; }
 .summary {
   margin-top: 240px; }
 
@@ -312,7 +312,7 @@ header {
     -ms-transform: translateX(-50%) translateY(-50%);
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%); }
-  @media only screen and (min-width: 100em) {
+  @media only screen and (min-width: 48em) {
     .cd-logo {
       margin-left: 5%; } }
 
@@ -366,9 +366,6 @@ header {
       -ms-transform: translateY(6px);
       -o-transform: translateY(6px);
       transform: translateY(6px); }
-  @media only screen and (min-width: 64em) {
-    .cd-nav-trigger {
-      display: none; } }
 
 .cd-main-nav {
   position: fixed;
@@ -394,35 +391,7 @@ header {
     border-style: solid; }
   .cd-main-nav li:first-of-type a {
     border-top-width: 1px; }
-  @media only screen and (min-width: 64em) {
-    .cd-main-nav {
-      position: static;
-      display: table;
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -o-transform: translateY(0);
-      transform: translateY(0);
-      width: auto;
-      height: 80px;
-      background: transparent;
-      padding: 0 2em;
-      text-align: left; }
-      .cd-main-nav li {
-        display: table-cell;
-        vertical-align: middle;
-        padding: 0 1em; }
-      .cd-main-nav li a {
-        display: inline-block;
-        font-size: 1.6rem;
-        padding: 0.4em 0.2em;
-        border-bottom: none;
-        -webkit-transition: all 0.2s;
-        -moz-transition: all 0.2s;
-        transition: all 0.2s; }
-      .cd-main-nav li:first-of-type a {
-        border-top: none; } }
-  @media only screen and (min-width: 100em) {
+  @media only screen and (min-width: 48em) {
     .cd-main-nav {
       display: none; } }
 
@@ -494,28 +463,19 @@ header {
     -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
     -moz-transition: opacity 0.2s 0s, visibility 0s 0s;
     transition: opacity 0.2s 0s, visibility 0s 0s; }
-  @media only screen and (min-width: 64em) {
-    .cd-download {
-      display: block; }
-      .cd-download span {
-        opacity: 0;
-        visibility: hidden; } }
-  @media only screen and (min-width: 100em) {
+  @media only screen and (min-width: 48em) {
     .cd-download {
       right: 5%; } }
 
 main {
   width: 90%;
-  max-width: 64em;
+  max-width: 1350px;
   margin: 0 auto;
   padding: 50px 0; }
   main > h1 {
     text-align: center;
     margin: 3em 0; }
-  @media only screen and (min-width: 64em) {
-    main {
-      padding-top: 80px; } }
-  @media only screen and (min-width: 100em) {
+  @media only screen and (min-width: 48em) {
     main {
       max-width: none;
       padding: 120px 0 50px; }
@@ -563,9 +523,6 @@ section {
     content: "10. "; }
   @media only screen and (min-width: 48em) {
     section {
-      margin: 3em 0 5em; } }
-  @media only screen and (min-width: 100em) {
-    section {
       width: 48%;
       float: left;
       margin: 0 4% 4em 0; }
@@ -601,18 +558,6 @@ section {
     width: 16px;
     height: 16px;
     border-radius: 0.2em; }
-
-@media only screen and (min-width: 48em) {
-  .cd-branding .cd-box {
-    width: 49%;
-    float: left;
-    margin: 0 2% 2em 0; }
-    .cd-branding .cd-box:nth-of-type(2n) {
-      margin-right: 0; }
-  .cd-branding ul:last-of-type {
-    clear: left; }
-    .cd-branding ul:last-of-type li {
-      margin-right: 3em; } }
 
 /* xColor section - basic style */
 .cd-colors li {
@@ -678,27 +623,11 @@ section {
   .cd-colors li:nth-of-type(5) .cd-color-swatch::after {
     background: #f2f2f2; }
 
-@media only screen and (min-width: 48em) {
-  .cd-colors li {
-    width: 19%;
-    float: left;
-    margin: 0 1.25% 1em 0; }
-    .cd-colors li:nth-of-type(2n) {
-      margin-right: 1.25%; }
-    .cd-colors li:nth-of-type(5n) {
-      margin-right: 0; } }
-
 .cd-typography .cd-box,
 .cd-buttons .cd-box,
 .cd-icons .cd-box,
 .cd-form .cd-box {
   padding: 1em; }
-  @media only screen and (min-width: 48em) {
-    .cd-typography .cd-box .cd-box,
-    .cd-buttons .cd-box .cd-box,
-    .cd-icons .cd-box .cd-box,
-    .cd-form .cd-box .cd-box {
-      padding: 2em; } }
 
 /* xTypography section - basic style */
 .cd-typography h1::before {
@@ -716,10 +645,6 @@ section {
 
 .cd-buttons button {
   margin: 0.4em; }
-
-@media only screen and (min-width: 64em) {
-  .cd-buttons button {
-    margin: 1em; } }
 
 /* xIcons section - basic style */
 .cd-icons li {

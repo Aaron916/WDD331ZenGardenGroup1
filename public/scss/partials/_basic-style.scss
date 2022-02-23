@@ -17,12 +17,16 @@ html * {
 
 html {
   font-size: 62.5%;
+  max-width: $display-max-width;
 }
 
 body {
   font-size: 1.6rem;
   font-family: $primary-font;
   font-weight: bolder;
+  max-width: $display-max-width;
+  margin: 0 auto;
+  float: none;
 }
 
 a {
@@ -75,19 +79,18 @@ header {
     display: inline-block;
   }
 
-  @include MQ(M) {
-    height: 240px;
-    @include clearfix;
-  }
+  //  @include MQ(M) {
+  //    height: 240px;
+  //    @include clearfix;
+  //  }
 }
 
-// header::after {
-//  content: url(scss/assets/images/cowboyhat.png);
-//  position: relative;
-//  right: 30%;
-//  transform: scale(0.2);
-//}
-
+header::after {
+  content: url(scss/assets/images/cowboyhat.png);
+  position: relative;
+  right: 30%;
+  transform: scale(0.1);
+}
 
 // centering and spacing most of our sections, right margin to avoid sidebar overlap
 
@@ -98,16 +101,18 @@ header {
 .participation,
 .benefits,
 .requirements {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  display: block;
+  align-items: left;
   margin-bottom: 15px;
-  margin-right: 200px;
-  margin-left: 20px;
+  @include MQ(L) {
+    margin-right: 200px;
+  }
+
+  h3 {
+    text-align: left;
+  }
   p {
-    margin-bottom: 15px;
-    text-align: start;
-    margin-left: 20px;
+    margin: 0 0 15px 15px;
   }
 }
 
@@ -119,7 +124,7 @@ header {
 // floating sidebar - Marc pushed sidebar to bottom until screen is at least 768px
 .sidebar {
   display: block;
-  @include MQ(S) {
+  @include MQ(L) {
     position: fixed;
     right: 50px;
     top: 240px;
@@ -188,9 +193,9 @@ header {
     }
   }
 
-  @include MQ(M) {
-    display: none;
-  }
+  // @include MQ(M) {
+  //   display: none;
+  // }
 }
 
 .cd-main-nav {
@@ -318,14 +323,14 @@ header {
     transition: opacity 0.2s 0s, visibility 0s 0s;
   }
 
-  @include MQ(M) {
-    display: block;
+  //  @include MQ(M) {
+  //    display: block;
 
-    span {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
+  //    span {
+  //      opacity: 0;
+  //      visibility: hidden;
+  //    }
+  //  }
 
   @include MQ(L) {
     right: 5%;
@@ -334,7 +339,7 @@ header {
 
 main {
   width: 90%;
-  max-width: $M;
+  max-width: $display-max-width;
   margin: 0 auto;
   padding: 50px 0;
 
@@ -343,9 +348,9 @@ main {
     margin: 3em 0;
   }
 
-  @include MQ(M) {
-    padding-top: 80px;
-  }
+  //  @include MQ(M) {
+  //    padding-top: 80px;
+  //  }
 
   @include MQ(L) {
     max-width: none;
