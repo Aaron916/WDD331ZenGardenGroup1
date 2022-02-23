@@ -9,14 +9,6 @@ $display-max-width: 1350px;
     @media only screen and (min-width: $L) {
       @content;
     }
-    //  } @else if $canvas == M {
-    //    @media only screen and (min-width: $M) {
-    //      @content;
-    //    }
-    //  } @else if $canvas == L {
-    //    @media only screen and (min-width: $L) {
-    //      @content;
-    //    }
   }
 }
 

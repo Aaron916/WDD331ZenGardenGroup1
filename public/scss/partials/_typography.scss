@@ -31,18 +31,13 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   margin: 1em 0;
-
-  //  @include MQ(S) {
-  //    font-size: 1.8rem;
-  //    margin: 1em 0 1.4em;
-  //  }
 }
 h3 {
   color: $color-3;
   font-weight: 300;
   font-size: 1.5em;
   text-align: left;
-  margin: 0.5rem 0 1rem 1rem;
+  margin: 0.5rem 0 1rem 1.5rem;
 }
 
 section > h2::before {
@@ -53,16 +48,11 @@ section > h2::before {
 p {
   font-size: 1.4rem;
   line-height: 1.4;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   color: black;
 
   a {
     color: $color-1;
     text-decoration: underline;
   }
-
-  //  @include MQ(S) {
-  //    font-size: 1.6rem;
-  //    line-height: 1.6;
-  //  }
 }

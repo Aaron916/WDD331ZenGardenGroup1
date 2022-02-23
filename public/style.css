@@ -75,7 +75,7 @@ h3 {
   font-weight: 300;
   font-size: 1.5em;
   text-align: left;
-  margin: 0.5rem 0 1rem 1rem; }
+  margin: 0.5rem 0 1rem 1.5rem; }
 
 section > h2::before {
   /* number before each section title */
@@ -84,7 +84,7 @@ section > h2::before {
 p {
   font-size: 1.4rem;
   line-height: 1.4;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   color: black; }
   p a {
     color: #60463b;
@@ -192,8 +192,7 @@ html * {
   -moz-osx-font-smoothing: grayscale; }
 
 html {
-  font-size: 62.5%;
-  max-width: 1350px; }
+  font-size: 62.5%; }
 
 body {
   font-size: 1.6rem;
@@ -226,8 +225,8 @@ header {
   position: absolute;
   height: 5em;
   width: 100%;
-  top: 0;
-  left: 0;
+  max-width: 1350px;
+  margin: 0 auto;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   z-index: 10;
   display: flex;
@@ -242,7 +241,7 @@ header {
   header h2 {
     position: absolute;
     bottom: 0;
-    -webkit-text-stroke: 0.25px black; }
+    color: #002e2c; }
   header nav {
     display: inline-block; }
 
@@ -261,7 +260,7 @@ header::after {
 .requirements {
   display: block;
   align-items: left;
-  margin-bottom: 15px; }
+  margin: 2rem 0 15px 0; }
   @media only screen and (min-width: 48em) {
     .intro,
     .supporting,
@@ -286,7 +285,8 @@ header::after {
   .participation p,
   .benefits p,
   .requirements p {
-    margin: 0 0 15px 15px; }
+    margin: 0 0 15px 1.5rem; }
+
 .summary {
   margin-top: 240px; }
 
@@ -295,8 +295,12 @@ header::after {
   @media only screen and (min-width: 48em) {
     .sidebar {
       position: fixed;
-      right: 50px;
-      top: 240px; } }
+      left: 70%;
+      top: 240px; }
+      .sidebar::after {
+        clear: both;
+        content: "";
+        display: block; } }
 
 .cd-logo {
   display: inline-block;
