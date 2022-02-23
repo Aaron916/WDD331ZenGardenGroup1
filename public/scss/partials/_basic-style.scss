@@ -47,7 +47,7 @@ header::before {
   z-index: -1;
 }
 header {
-  position: fixed;
+  position: absolute;
   height: 5em;
   width: 100%;
   top: 0;
@@ -87,6 +87,11 @@ header {
 //  right: 30%;
 //  transform: scale(0.2);
 //}
+
+// background color with paisley image
+#css-zen-garden {
+  background-image: url(../assets/Images/Background.png);
+}
 
 // centering and spacing most of our sections, right margin to avoid sidebar overlap
 

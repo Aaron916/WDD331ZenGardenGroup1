@@ -233,7 +233,7 @@ header::before {
   z-index: -1; }
 
 header {
-  position: fixed;
+  position: absolute;
   height: 5em;
   width: 100%;
   top: 0;
