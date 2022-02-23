@@ -274,7 +274,8 @@ header {
   flex-direction: column;
   align-items: start;
   margin-bottom: 15px;
-  margin-right: 200px; }
+  margin-right: 200px;
+  margin-left: 20px; }
   .intro p,
   .supporting p,
   .preamble p,
@@ -283,7 +284,8 @@ header {
   .benefits p,
   .requirements p {
     margin-bottom: 15px;
-    text-align: start; }
+    text-align: start;
+    margin-left: 20px; }
 
 .summary {
   margin-top: 240px; }
