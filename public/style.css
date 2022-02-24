@@ -333,7 +333,7 @@ header::after {
 .zen-resources {
   background-image: url(scss/assets/images/Background.png);
   position: fixed;
-  bottom: 0px;
+  bottom: 1.2em;
   width: 100%;
   padding: 1em 0 0.5em 0;
   border-top: solid 5px #002e2c; }
@@ -347,7 +347,7 @@ header::after {
     font-size: 0.5rem; }
   .zen-resources li {
     margin: 0 1.5em 0 1.5em;
-    font-size: 1.3rem; }
+    font-size: 0.9rem; }
 
 .requirements p:last-child {
   background-image: url(scss/assets/images/leather.jpg);
@@ -357,7 +357,22 @@ header::after {
   padding: 1em 0 2em 1.5em;
   position: absolute;
   margin: 1rem 0 -1.5em 0;
-  bottom: 5em; }
+  bottom: -130em;
+  border-top: solid 5px #002e2c; }
+  .requirements p:last-child a {
+    color: black; }
+
+footer {
+  background-image: url(scss/assets/images/Background.png);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  height: 2em;
+  width: 100%;
+  padding: 0.5em 0 0.5em 0;
+  font-size: 1rem; }
 
 .cd-logo {
   display: inline-block;

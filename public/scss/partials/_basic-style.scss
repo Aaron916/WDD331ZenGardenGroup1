@@ -179,7 +179,7 @@ header::after {
 .zen-resources {
   background-image: url(scss/assets/images/Background.png);
   position: fixed;
-  bottom: 0px;
+  bottom: 1.2em;
   width: 100%;
   padding: 1em 0 0.5em 0;
   border-top: solid 5px $color-4;
@@ -197,7 +197,7 @@ header::after {
   }
   li {
     margin: 0 1.5em 0 1.5em;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -212,8 +212,26 @@ header::after {
   position: absolute;
   margin: 1rem 0 -1.5em 0;
   bottom: -130em; //??? Marc has no idea how to place this paragraph to stay just above the resources footer
+  border-top: solid 5px $color-4;
+  a {
+    color: black;
+  }
 }
 
+//footer needs pushed to the bottom
+footer {
+  background-image: url(scss/assets/images/Background.png);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  height: 2em;
+  width: 100%;
+  padding: 0.5em 0 0.5em 0;
+  font-size: 1rem;
+}
+//****************************************** imported code from styleguide
 .cd-logo {
   display: inline-block;
   height: 100%;
