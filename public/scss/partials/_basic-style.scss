@@ -128,6 +128,92 @@ header::after {
   }
 }
 
+//styling for "Select a Design" .design-selection Small view
+.design-selection {
+  h3 {
+    display: none;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  li::before {
+    // NEED HELP HERE---> can get lasso to display but unable to resize - Marc
+    //content: url(scss/assets/images/lasso.png);
+    //max-width: 10%;
+    //height: auto;
+    font-size: 0.5rem; //temporary until we fix lasso.png
+    content: " -lasso- "; //temporary
+  }
+  li {
+    margin: 0 1.5em 0 1.5em;
+    font-size: 1.3rem;
+  }
+}
+
+//styling for "Archives" .design-archives
+.design-archives {
+  h3 {
+    display: none;
+  }
+  li::before {
+    //Marc - have been unable to resize or rotate sign
+    //content: url(scss/assets/images/sign.png);
+    //transform: rotate(
+    //180deg
+    //);
+    // temporary placeholder until we get sign.png working
+    content: "-wood arrow- "; //temp
+    font-size: 0.5rem; //temp
+  }
+  li {
+    margin: 0 1.5em 0 1.5em;
+    font-size: 1.3rem;
+  }
+}
+
+//styling for "Resources" .zen-resources goes at bottom for both S and L
+//This element needs to remain at bottom in Large view but jumping to sidebar
+//Need to place lasso.png
+.zen-resources {
+  background-image: url(scss/assets/images/Background.png);
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 1em 0 0.5em 0;
+  border-top: solid 5px $color-4;
+  h3 {
+    display: none;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+  li::before {
+    //Need to figure out how to place lasso.png
+    content: "-lasso- "; //temp
+    font-size: 0.5rem; //temp
+  }
+  li {
+    margin: 0 1.5em 0 1.5em;
+    font-size: 1.3rem;
+  }
+}
+
+//styling of last paragraph in requirements class
+//per our wireframe should be stand alone with leather background
+.requirements p:last-child {
+  background-image: url(scss/assets/images/leather.jpg);
+  height: auto;
+  width: 100%;
+  max-width: $display-max-width;
+  padding: 1em 0 2em 1.5em;
+  position: absolute;
+  margin: 1rem 0 -1.5em 0;
+  bottom: -130em; //??? Marc has no idea how to place this paragraph to stay just above the resources footer
+}
+
 .cd-logo {
   display: inline-block;
   height: 100%;
@@ -191,62 +277,52 @@ header::after {
   }
 }
 
-.cd-main-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  padding: 50px 0;
-  text-align: center;
-  @include transform(translateY(-100%));
-  @include transition(transform 0.3s);
+//.cd-main-nav {
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100vh;
+//  padding: 50px 0;
+//  text-align: center;
+//  @include transform(translateY(-100%));
+//  @include transition(transform 0.3s);
 
-  li a {
-    display: block;
-    font-size: 1.8rem;
-    padding: 1em 0;
-    border-bottom-width: 1px;
-    border-style: solid;
-  }
+//  li a {
+//    display: block;
+//    font-size: 1.8rem;
+//    padding: 1em 0;
+//    border-bottom-width: 1px;
+//    border-style: solid;
+//  }
 
-  li:first-of-type a {
-    border-top-width: 1px;
-  }
+//  li:first-of-type a {
+//    border-top-width: 1px;
+//  }
 
-  @include MQ(M) {
-    position: static;
-    display: table;
-    @include transform(translateY(0));
-    width: auto;
-    height: 80px;
-    background: transparent;
-    padding: 0 2em;
-    text-align: left;
+//    li {
+//      display: table-cell;
+//      vertical-align: middle;
+//      padding: 0 1em;
+//    }
+//
+//    li a {
+//      display: inline-block;
+//      font-size: 1.6rem;
+//      padding: 0.4em 0.2em;
+//      border-bottom: none;
+//      @include transition(all 0.2s);
+//    }
 
-    li {
-      display: table-cell;
-      vertical-align: middle;
-      padding: 0 1em;
-    }
+//    li:first-of-type a {
+//      border-top: none;
+//    }
+//  }
 
-    li a {
-      display: inline-block;
-      font-size: 1.6rem;
-      padding: 0.4em 0.2em;
-      border-bottom: none;
-      @include transition(all 0.2s);
-    }
-
-    li:first-of-type a {
-      border-top: none;
-    }
-  }
-
-  @include MQ(L) {
-    display: none;
-  }
-}
+//  @include MQ(L) {
+//    display: none;
+//  }
+//}
 
 .nav-is-visible {
   .cd-nav-trigger span {
