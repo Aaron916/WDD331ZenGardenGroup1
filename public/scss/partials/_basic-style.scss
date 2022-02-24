@@ -108,6 +108,7 @@ header::after {
   }
   p {
     margin: 0 0 15px 1.5rem;
+    max-width: 90%;
   }
 }
 
@@ -116,7 +117,7 @@ header::after {
   margin-top: 240px;
 }
 
-// floating sidebar - Marc pushed sidebar to bottom until screen is at least 768px
+// floating sidebar - is at bottom for small and side for large
 .sidebar {
   display: block;
   @include MQ(L) {

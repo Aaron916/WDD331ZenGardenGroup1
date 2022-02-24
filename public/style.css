@@ -61,7 +61,7 @@ h1 {
   font-weight: 300;
   line-height: 1.2;
   margin: 0 0 0.4em; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 38em) {
     h1 {
       font-size: 4rem; } }
 
@@ -130,7 +130,7 @@ xPage title
 -------------------------------- */
 main > h1 {
   color: #002e2c; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 38em) {
     main > h1 {
       /* title goes into the header on big devices */
       color: #002e2c; } }
@@ -261,7 +261,7 @@ header::after {
   display: block;
   align-items: left;
   margin: 2rem 0 15px 0; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 38em) {
     .intro,
     .supporting,
     .preamble,
@@ -285,14 +285,15 @@ header::after {
   .participation p,
   .benefits p,
   .requirements p {
-    margin: 0 0 15px 1.5rem; }
+    margin: 0 0 15px 1.5rem;
+    max-width: 90%; }
 
 .summary {
   margin-top: 240px; }
 
 .sidebar {
   display: block; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 38em) {
     .sidebar {
       position: fixed;
       left: 70%;
@@ -316,7 +317,7 @@ header::after {
     -ms-transform: translateX(-50%) translateY(-50%);
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%); }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 38em) {
     .cd-logo {
       margin-left: 5%; } }
 
@@ -395,7 +396,7 @@ header::after {
     border-style: solid; }
   .cd-main-nav li:first-of-type a {
     border-top-width: 1px; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 38em) {
     .cd-main-nav {
       display: none; } }
 
@@ -467,7 +468,7 @@ header::after {
     -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
     -moz-transition: opacity 0.2s 0s, visibility 0s 0s;
     transition: opacity 0.2s 0s, visibility 0s 0s; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 38em) {
     .cd-download {
       right: 5%; } }
 
@@ -479,7 +480,7 @@ main {
   main > h1 {
     text-align: center;
     margin: 3em 0; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 38em) {
     main {
       max-width: none;
       padding: 120px 0 50px; }
@@ -525,7 +526,7 @@ section {
     content: "9. "; }
   section:nth-of-type(10) h2::before {
     content: "10. "; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 38em) {
     section {
       width: 48%;
       float: left;
