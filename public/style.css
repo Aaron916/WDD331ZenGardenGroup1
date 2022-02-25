@@ -222,7 +222,7 @@ header::after {
 
 header {
   position: absolute;
-  height: 10em;
+  height: 15em;
   width: 100%;
   max-width: 1350px;
   margin: 0 auto;
@@ -234,6 +234,9 @@ header {
   justify-content: center;
   background-image: url(scss/assets/images/leather.jpg);
   border-bottom: solid 5px #002e2c; }
+  @media only screen and (min-width: 38em) {
+    header {
+      height: 20em; } }
   header h1 {
     text-shadow: 3px 5px #002e2c;
     -webkit-text-stroke: 1px black;
@@ -264,7 +267,7 @@ header {
     .participation,
     .benefits,
     .requirements {
-      margin-right: 15%; } }
+      margin-right: 17%; } }
   .intro h3,
   .supporting h3,
   .preamble h3,
@@ -283,9 +286,11 @@ header {
     margin: 0 0 15px 1.5rem;
     max-width: 90%; }
 
-@media only screen and (min-width: 38em) {
-  .summary {
-    margin-top: 10em; } }
+.summary {
+  margin-top: 17em; }
+  @media only screen and (min-width: 38em) {
+    .summary {
+      margin-top: 22em; } }
 
 .sidebar {
   display: block; }
@@ -293,7 +298,7 @@ header {
     .sidebar {
       position: fixed;
       left: 70%;
-      top: 240px; }
+      top: 22em; }
       .sidebar::after {
         clear: both;
         content: "";
@@ -572,6 +577,9 @@ section {
   section:nth-of-type(1) h2::before {
     background-image: url(https://freesvg.org/img/Raseone_Horseshoe.png);
     background-size: 50px 50px;
+    position: absolute;
+    top: 50%;
+    left: -50%;
     display: inline-block;
     width: 50px;
     height: 50px;

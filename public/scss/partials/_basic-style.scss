@@ -3,7 +3,10 @@
 xBasic style
 
 -------------------------------- */
-$header-height: 10em;
+$header-height-L: 20em;
+$header-margin-L: 22em;
+$header-height-S: 15em;
+$header-margin-S: 17em;
 *,
 *::after,
 *::before {
@@ -50,7 +53,10 @@ header::after {
 }
 header {
   position: absolute;
-  height: $header-height;
+  height: $header-height-S;
+  @include MQ(L) {
+    height: $header-height-L;
+  }
   width: 100%;
   max-width: $display-max-width;
   margin: 0 auto;
@@ -101,7 +107,7 @@ header {
   flex-direction: column;
   margin: 2rem 0 15px 0;
   @include MQ(L) {
-    margin-right: 15%;
+    margin-right: 17%;
   }
 
   h3 {
@@ -115,12 +121,9 @@ header {
 
 // avoiding overlap with header, should be changed based on MQ
 .summary {
+  margin-top: $header-margin-S;
   @include MQ(L) {
-    margin-top: $header-height;
-  }
-
-  @include MQ(S) {
-
+    margin-top: $header-margin-L;
   }
 }
 
@@ -130,7 +133,7 @@ header {
   @include MQ(L) {
     position: fixed;
     left: 70%;
-    top: 240px;
+    top: $header-margin-L;
     @include clearfix;
   }
 }
@@ -484,10 +487,13 @@ main {
 section {
   margin: 3em 0;
   @include clearfix;
-
+  // HorseShoe 
   &:nth-of-type(1) h2::before {
     background-image: url(https://freesvg.org/img/Raseone_Horseshoe.png);
     background-size: 50px 50px;
+    position: absolute;
+    top: 50%;
+    left: -50%;
     display: inline-block;
     width: 50px;
     height: 50px;
