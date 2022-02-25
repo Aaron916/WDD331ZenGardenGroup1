@@ -53,6 +53,7 @@ header::after {
 }
 header {
   position: absolute;
+  top:0%;
   height: $header-height-S;
   @include MQ(L) {
     height: $header-height-L;
@@ -136,6 +137,7 @@ header {
     top: $header-margin-L;
     @include clearfix;
   }
+  z-index: 100;
 }
 
 //Issue - keeps extending beyound max-width for page
@@ -241,13 +243,15 @@ header {
 //per our wireframe should be stand alone with leather background
 .requirements p:last-child {
   background-image: url(scss/assets/images/leather.jpg);
-  height: auto;
-  width: 100%;
+  height: 10em;
+  @include MQ(L) {
+    height:20em;
+  }
+  width: $display-max-width;
   max-width: $display-max-width;
   padding: 1em 0 2em 1.5em;
-  position: absolute;
+  position: relative;
   margin: 1rem 0 -1.5em 0;
-  bottom: -130em; //??? Marc has no idea how to place this paragraph to stay just above the resources footer
   border-top: solid 5px $color-4;
   a {
     color: black;

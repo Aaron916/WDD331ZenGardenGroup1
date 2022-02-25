@@ -222,6 +222,7 @@ header::after {
 
 header {
   position: absolute;
+  top: 0%;
   height: 15em;
   width: 100%;
   max-width: 1350px;
@@ -293,7 +294,8 @@ header {
       margin-top: 22em; } }
 
 .sidebar {
-  display: block; }
+  display: block;
+  z-index: 100; }
   @media only screen and (min-width: 38em) {
     .sidebar {
       position: fixed;
@@ -377,14 +379,16 @@ header {
 
 .requirements p:last-child {
   background-image: url(scss/assets/images/leather.jpg);
-  height: auto;
-  width: 100%;
+  height: 10em;
+  width: 1350px;
   max-width: 1350px;
   padding: 1em 0 2em 1.5em;
-  position: absolute;
+  position: relative;
   margin: 1rem 0 -1.5em 0;
-  bottom: -130em;
   border-top: solid 5px #002e2c; }
+  @media only screen and (min-width: 38em) {
+    .requirements p:last-child {
+      height: 20em; } }
   .requirements p:last-child a {
     color: black; }
 
