@@ -97,10 +97,9 @@ header::after {
 .benefits,
 .requirements {
   display: block;
-  align-items: left;
   margin: 2rem 0 15px 0;
   @include MQ(L) {
-    margin-right: 200px;
+    margin-right: 15%;
   }
 
   h3 {
@@ -212,6 +211,9 @@ header::after {
   li {
     margin: 0 1.5em 0 1.5em;
     font-size: 0.9rem;
+    @include MQ(L) {
+      font-size: 1.2rem;
+    }
   }
   @include MQ(L) {
     position: fixed;
@@ -254,6 +256,9 @@ footer {
   max-width: $display-max-width;
   padding: 0.5em 0 0.5em 0;
   font-size: 1rem;
+  @include MQ(L) {
+    font-size: 1.3rem;
+  }
 }
 //****************************************** imported code from styleguide
 .cd-logo {
@@ -514,18 +519,14 @@ section {
     content: "10. ";
   }
 
-  @include MQ(S) {
-    margin: 3em 0 5em;
-  }
-
-  @include MQ(L) {
-    @include column(0.48);
-    margin: 0 4% 4em 0;
-
-    &:nth-of-type(2n) {
-      margin-right: 0;
-    }
-  }
+  //  @include MQ(L) {
+  //    @include column(0.48);
+  //    margin: 0 4% 4em 0;
+  //
+  //    &:nth-of-type(2n) {
+  //      margin-right: 0;
+  //    }
+  //  }
 }
 
 /* xBranding section - basic style */

@@ -259,7 +259,6 @@ header::after {
 .benefits,
 .requirements {
   display: block;
-  align-items: left;
   margin: 2rem 0 15px 0; }
   @media only screen and (min-width: 38em) {
     .intro,
@@ -269,7 +268,7 @@ header::after {
     .participation,
     .benefits,
     .requirements {
-      margin-right: 200px; } }
+      margin-right: 15%; } }
   .intro h3,
   .supporting h3,
   .preamble h3,
@@ -361,9 +360,13 @@ header::after {
   .zen-resources li {
     margin: 0 1.5em 0 1.5em;
     font-size: 0.9rem; }
+    @media only screen and (min-width: 38em) {
+      .zen-resources li {
+        font-size: 1.2rem; } }
   @media only screen and (min-width: 38em) {
     .zen-resources {
       position: fixed;
+      left: 0;
       bottom: 1.2em;
       width: 100%;
       max-width: 1350px;
@@ -395,6 +398,9 @@ footer {
   max-width: 1350px;
   padding: 0.5em 0 0.5em 0;
   font-size: 1rem; }
+  @media only screen and (min-width: 38em) {
+    footer {
+      font-size: 1.3rem; } }
 
 .cd-logo {
   display: inline-block;
@@ -591,13 +597,6 @@ section {
     content: "9. "; }
   section:nth-of-type(10) h2::before {
     content: "10. "; }
-  @media only screen and (min-width: 38em) {
-    section {
-      width: 48%;
-      float: left;
-      margin: 0 4% 4em 0; }
-      section:nth-of-type(2n) {
-        margin-right: 0; } }
 
 /* xBranding section - basic style */
 .cd-branding .cd-box {
