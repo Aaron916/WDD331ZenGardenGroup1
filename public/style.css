@@ -310,6 +310,10 @@ header::after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em; }
+  @media only screen and (min-width: 38em) {
+    .design-selection ul {
+      display: block;
+      margin-bottom: 2em; } }
 
 .design-selection li::before {
   font-size: 0.5rem;
@@ -318,6 +322,9 @@ header::after {
 .design-selection li {
   margin: 0 1.5em 0 1.5em;
   font-size: 1.3rem; }
+  @media only screen and (min-width: 38em) {
+    .design-selection li {
+      margin-bottom: 1em; } }
 
 .design-archives h3 {
   display: none; }
@@ -341,13 +348,21 @@ header::after {
     display: none; }
   .zen-resources ul {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: space-around; }
   .zen-resources li::before {
     content: "-lasso- ";
     font-size: 0.5rem; }
   .zen-resources li {
     margin: 0 1.5em 0 1.5em;
     font-size: 0.9rem; }
+  @media only screen and (min-width: 38em) {
+    .zen-resources {
+      position: fixed;
+      bottom: 1.2em;
+      left: 0;
+      width: 100%;
+      padding: 1em 0 0.5em 0; } }
 
 .requirements p:last-child {
   background-image: url(scss/assets/images/leather.jpg);

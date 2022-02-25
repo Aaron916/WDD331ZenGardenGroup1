@@ -129,6 +129,7 @@ header::after {
 }
 
 //styling for "Select a Design" .design-selection Small view
+//ISSUE - keeps blowing past right max-width for page
 .design-selection {
   h3 {
     display: none;
@@ -137,6 +138,10 @@ header::after {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
+    @include MQ(L) {
+      display: block;
+      margin-bottom: 2em;
+    }
   }
   li::before {
     // NEED HELP HERE---> can get lasso to display but unable to resize - Marc
@@ -149,6 +154,9 @@ header::after {
   li {
     margin: 0 1.5em 0 1.5em;
     font-size: 1.3rem;
+    @include MQ(L) {
+      margin-bottom: 1em;
+    }
   }
 }
 
@@ -189,6 +197,7 @@ header::after {
   ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
   li::before {
     //Need to figure out how to place lasso.png
@@ -198,6 +207,13 @@ header::after {
   li {
     margin: 0 1.5em 0 1.5em;
     font-size: 0.9rem;
+  }
+  @include MQ(L) {
+    position: fixed;
+    bottom: 1.2em;
+    left: 0;
+    width: 100%;
+    padding: 1em 0 0.5em 0;
   }
 }
 
