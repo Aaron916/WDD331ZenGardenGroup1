@@ -303,6 +303,9 @@ header::after {
         content: "";
         display: block; } }
 
+.wrapper {
+  max-width: 1350px; }
+
 .design-selection h3 {
   display: none; }
 
@@ -342,6 +345,8 @@ header::after {
   position: fixed;
   bottom: 1.2em;
   width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
   padding: 1em 0 0.5em 0;
   border-top: solid 5px #002e2c; }
   .zen-resources h3 {
@@ -360,8 +365,9 @@ header::after {
     .zen-resources {
       position: fixed;
       bottom: 1.2em;
-      left: 0;
       width: 100%;
+      max-width: 1350px;
+      margin: 0 auto;
       padding: 1em 0 0.5em 0; } }
 
 .requirements p:last-child {
@@ -386,6 +392,7 @@ footer {
   bottom: 0px;
   height: 2em;
   width: 100%;
+  max-width: 1350px;
   padding: 0.5em 0 0.5em 0;
   font-size: 1rem; }
 

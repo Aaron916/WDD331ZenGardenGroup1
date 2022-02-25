@@ -128,8 +128,11 @@ header::after {
   }
 }
 
+//Issue - keeps extending beyound max-width for page
+.wrapper {
+  max-width: $display-max-width; //has no effect
+}
 //styling for "Select a Design" .design-selection Small view
-//ISSUE - keeps blowing past right max-width for page
 .design-selection {
   h3 {
     display: none;
@@ -189,6 +192,8 @@ header::after {
   position: fixed;
   bottom: 1.2em;
   width: 100%;
+  max-width: $display-max-width;
+  margin: 0 auto;
   padding: 1em 0 0.5em 0;
   border-top: solid 5px $color-4;
   h3 {
@@ -210,9 +215,11 @@ header::after {
   }
   @include MQ(L) {
     position: fixed;
+    left: 0; //This causes an issue in large view as it is stuck at left side and it moves to the left beyound max-width for page. (Marc)
     bottom: 1.2em;
-    left: 0;
     width: 100%;
+    max-width: $display-max-width;
+    margin: 0 auto;
     padding: 1em 0 0.5em 0;
   }
 }
@@ -244,6 +251,7 @@ footer {
   bottom: 0px;
   height: 2em;
   width: 100%;
+  max-width: $display-max-width;
   padding: 0.5em 0 0.5em 0;
   font-size: 1rem;
 }
