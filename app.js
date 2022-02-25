@@ -8,7 +8,7 @@ app.set("view engine", "jade");
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", (req, res, next) => {
+app.get("/", (req, res, next) => {
   res.render("index");
 });
 
