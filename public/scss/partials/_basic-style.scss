@@ -201,11 +201,11 @@ header {
 //Need to place lasso.png
 .zen-resources {
   background-image: url(scss/assets/images/Background.png);
-  position: fixed;
-  bottom: 1.2em;
   width: 100%;
+  position: relative;
+  bottom: 2em;
+  left: 0px;
   max-width: $display-max-width;
-  margin: 0 auto;
   padding: 1em 0 0.5em 0;
   border-top: solid 5px $color-4;
   h3 {
@@ -229,9 +229,11 @@ header {
     }
   }
   @include MQ(L) {
-    position: fixed;
-    left: 0; //This causes an issue in large view as it is stuck at left side and it moves to the left beyound max-width for page. (Marc)
-    bottom: 1.2em;
+    position: absolute;
+    left:0;
+    bottom:2em;
+    // left: 0; //This causes an issue in large view as it is stuck at left side and it moves to the left beyound max-width for page. (Marc)
+    // bottom: 1.2em;
     width: 100%;
     max-width: $display-max-width;
     margin: 0 auto;
