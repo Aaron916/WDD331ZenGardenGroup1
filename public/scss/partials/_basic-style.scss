@@ -47,13 +47,13 @@ select {
 }
 header::after {
   content: url(scss/assets/images/zg.svg);
-  position:absolute;
+  position: absolute;
   width: 7em;
   z-index: 10;
 }
 header {
   position: absolute;
-  top:0%;
+  top: 0%;
   height: $header-height-S;
   @include MQ(L) {
     height: $header-height-L;
@@ -126,6 +126,9 @@ header {
   @include MQ(L) {
     margin-top: $header-margin-L;
   }
+  p {
+    margin-right: 5em;
+  }
 }
 
 // floating sidebar - is at bottom for small and side for large
@@ -140,10 +143,6 @@ header {
   z-index: 100;
 }
 
-//Issue - keeps extending beyound max-width for page
-.wrapper {
-  max-width: $display-max-width; //has no effect
-}
 //styling for "Select a Design" .design-selection Small view
 .design-selection {
   h3 {
@@ -153,9 +152,10 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
+    margin-bottom: 1em;
     @include MQ(L) {
       display: block;
-      margin-bottom: 2em;
+      margin-bottom: 3em;
     }
   }
   li::before {
@@ -230,8 +230,8 @@ header {
   }
   @include MQ(L) {
     position: absolute;
-    left:0;
-    bottom:2em;
+    left: 0;
+    bottom: 2em;
     // left: 0; //This causes an issue in large view as it is stuck at left side and it moves to the left beyound max-width for page. (Marc)
     // bottom: 1.2em;
     width: 100%;
@@ -247,9 +247,9 @@ header {
   background-image: url(scss/assets/images/leather.jpg);
   height: 10em;
   @include MQ(L) {
-    height:20em;
+    height: 10em;
   }
-  width: $display-max-width;
+  width: 100%;
   max-width: $display-max-width;
   padding: 1em 0 2em 1.5em;
   position: relative;
@@ -493,7 +493,7 @@ main {
 section {
   margin: 3em 0;
   @include clearfix;
-  // HorseShoe 
+  // HorseShoe
   &:nth-of-type(1) h2::before {
     background-image: url(https://freesvg.org/img/Raseone_Horseshoe.png);
     background-size: 50px 50px;

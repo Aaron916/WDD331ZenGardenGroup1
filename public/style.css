@@ -292,6 +292,8 @@ header {
   @media only screen and (min-width: 38em) {
     .summary {
       margin-top: 22em; } }
+  .summary p {
+    margin-right: 5em; }
 
 .sidebar {
   display: block;
@@ -306,20 +308,18 @@ header {
         content: "";
         display: block; } }
 
-.wrapper {
-  max-width: 1350px; }
-
 .design-selection h3 {
   display: none; }
 
 .design-selection ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1em; }
+  gap: 1em;
+  margin-bottom: 1em; }
   @media only screen and (min-width: 38em) {
     .design-selection ul {
       display: block;
-      margin-bottom: 2em; } }
+      margin-bottom: 3em; } }
 
 .design-selection li::before {
   font-size: 0.5rem;
@@ -349,7 +349,6 @@ header {
   position: relative;
   bottom: 2em;
   left: 0px;
-  margin-top: 4em;
   max-width: 1350px;
   padding: 1em 0 0.5em 0;
   border-top: solid 5px #002e2c; }
@@ -381,7 +380,7 @@ header {
 .requirements p:last-child {
   background-image: url(scss/assets/images/leather.jpg);
   height: 10em;
-  width: 1350px;
+  width: 100%;
   max-width: 1350px;
   padding: 1em 0 2em 1.5em;
   position: relative;
@@ -389,7 +388,7 @@ header {
   border-top: solid 5px #002e2c; }
   @media only screen and (min-width: 38em) {
     .requirements p:last-child {
-      height: 20em; } }
+      height: 10em; } }
   .requirements p:last-child a {
     color: black; }
 
