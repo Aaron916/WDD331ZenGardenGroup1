@@ -1,12 +1,15 @@
 /* -------------------------------- 
-
 xBasic style
-
 -------------------------------- */
 $header-height-L: 20em;
 $header-margin-L: 22em;
 $header-height-S: 15em;
 $header-margin-S: 17em;
+$font-size-S: 1.6rem;
+$font-size-L: 2rem;
+$sidebar-font-size: 1.5rem;
+$sidebar-h3-font-size: 1.8rem;
+
 *,
 *::after,
 *::before {
@@ -23,7 +26,7 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: $font-size-S;
   font-family: $primary-font;
   font-weight: bolder;
   max-width: $display-max-width;
@@ -43,7 +46,7 @@ input,
 textarea,
 select {
   font-family: $primary-font;
-  font-size: 1.6rem;
+  font-size: $font-size-S;
 }
 header::after {
   content: url(scss/assets/images/zg.svg);
@@ -80,7 +83,6 @@ header {
     bottom: 0;
     color: $color-4;
     z-index: 11;
-    //-webkit-text-stroke: 0.25px black;
   }
 
   nav {
@@ -107,9 +109,6 @@ header {
   display: flex;
   flex-direction: column;
   margin: 2rem 0 15px 0;
-  @include MQ(L) {
-    margin-right: 17%;
-  }
 
   h3 {
     text-align: left;
@@ -120,137 +119,149 @@ header {
   }
 }
 
-// avoiding overlap with header, should be changed based on MQ
-.summary {
-  margin-top: $header-margin-S;
+.page-wrapper {
+  //wraps .intro .supporting .sidebar
   @include MQ(L) {
-    margin-top: $header-margin-L;
+    display: grid;
+    grid-template-columns: 2fr 1fr; //divides page into 2 columns in large view
+    grid-template-rows: 400px 22em auto; //header takes up the 400px
   }
-  p {
-    margin-right: 5em;
+}
+.intro {
+  @include MQ(L) {
+    display: grid; //establishing new grid for header .summary .preamble
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 400px 6em 22em;
+    grid-column: 1/3; //.page-wrapper grid is parent
+    grid-row-start: 1; //.page-wrapper grid is parent
+  }
+  .summary {
+    //.intro is parent
+    margin-top: $header-margin-S;
+    @include MQ(L) {
+      grid-column: 1/2;
+      grid-row-start: 2;
+      margin-top: 0;
+    }
+    p {
+      margin-right: 5em;
+    }
+  }
+  .preamble {
+    //.intro is parent
+    @include MQ(L) {
+      grid-column: 1/2;
+      grid-row-start: 3;
+    }
+  }
+}
+.main.supporting {
+  @include MQ(L) {
+    grid-column: 1/2; //.page-wrapper grid is parent
+    grid-row-start: 3; //.page-wrapper grid is parent
   }
 }
 
-// floating sidebar - is at bottom for small and side for large
 .sidebar {
   display: block;
-  @include MQ(L) {
-    position: fixed;
-    left: 70%;
-    top: $header-margin-L;
-    @include clearfix;
-  }
-  z-index: 100;
-}
-
-//styling for "Select a Design" .design-selection Small view
-.design-selection {
   h3 {
     display: none;
   }
-  ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
-    margin-bottom: 1em;
-    @include MQ(L) {
+  li {
+    line-height: 1.5em;
+    margin: 0 1.5em 0 1.5em;
+  }
+  @include MQ(L) {
+    display: grid; //grid for .sidebar in large view
+    grid-template-columns: 1fr;
+    grid-template-rows: 40em 40em auto;
+    grid-column: 2/3; //.page-wrapper grid is parent
+    grid-row-start: 2; //.page-wrapper grid is parent
+    margin-top: 2em;
+    margin-bottom: 2em;
+    h3 {
       display: block;
-      margin-bottom: 3em;
+      font-size: $sidebar-h3-font-size;
+    }
+    li {
+      font-size: $sidebar-font-size;
     }
   }
-  li::before {
-    // NEED HELP HERE---> can get lasso to display but unable to resize - Marc
-    //content: url(scss/assets/images/lasso.png);
-    //max-width: 10%;
-    //height: auto;
-    font-size: 0.5rem; //temporary until we fix lasso.png
-    content: " -lasso- "; //temporary
-  }
-  li {
-    margin: 0 1.5em 0 1.5em;
-    font-size: 1.3rem;
-    @include MQ(L) {
+  .design-selection {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5em;
       margin-bottom: 1em;
+      @include MQ(L) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3em;
+      }
+    }
+    li::before {
+      // NEED HELP HERE---> can get lasso to display but unable to resize - Marc
+      //content: url(scss/assets/images/lasso.png);
+      //max-width: 10%;
+      //height: auto;
+      font-size: 0.5rem; //temporary until we fix lasso.png
+      content: " -lasso- "; //temporary
+    }
+    li {
+      @include MQ(L) {
+        margin-bottom: 1em;
+      }
     }
   }
-}
-
-//styling for "Archives" .design-archives
-.design-archives {
-  h3 {
-    display: none;
-  }
-  li::before {
-    //Marc - have been unable to resize or rotate sign
-    //content: url(scss/assets/images/sign.png);
-    //transform: rotate(
-    //180deg
-    //);
-    // temporary placeholder until we get sign.png working
-    content: "-wood arrow- "; //temp
-    font-size: 0.5rem; //temp
-  }
-  li {
-    margin: 0 1.5em 0 1.5em;
-    font-size: 1.3rem;
-  }
-}
-
-//styling for "Resources" .zen-resources goes at bottom for both S and L
-//This element needs to remain at bottom in Large view but jumping to sidebar
-//Need to place lasso.png
-.zen-resources {
-  background-image: url(scss/assets/images/Background.png);
-  width: 100%;
-  position: relative;
-  bottom: 2em;
-  left: 0px;
-  max-width: $display-max-width;
-  padding: 1em 0 0.5em 0;
-  border-top: solid 5px $color-4;
-  h3 {
-    display: none;
-  }
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  li::before {
-    //Need to figure out how to place lasso.png
-    content: "-lasso- "; //temp
-    font-size: 0.5rem; //temp
-  }
-  li {
-    margin: 0 1.5em 0 1.5em;
-    font-size: 0.9rem;
+  .design-archives {
+    li::before {
+      //Marc - have been unable to resize or rotate sign
+      //content: url(scss/assets/images/sign.png);
+      //transform: rotate(
+      //180deg
+      //);
+      // temporary placeholder until we get sign.png working
+      content: "-wood arrow- "; //temp
+      font-size: 0.5rem; //temp
+    }
     @include MQ(L) {
-      font-size: 1.2rem;
+      grid-row-start: 2;
     }
   }
-  @include MQ(L) {
-    position: absolute;
-    left: 0;
-    bottom: 2em;
-    // left: 0; //This causes an issue in large view as it is stuck at left side and it moves to the left beyound max-width for page. (Marc)
-    // bottom: 1.2em;
+
+  //Need to place lasso.png
+  .zen-resources {
+    grid-column: 1/3;
+    grid-row-start: 3;
     width: 100%;
     max-width: $display-max-width;
-    margin: 0 auto;
     padding: 1em 0 0.5em 0;
+    margin-top: 2em;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: 1rem;
+      @include MQ(L) {
+        flex-direction: column;
+        line-height: 1em;
+      }
+    }
+    li::before {
+      //Need to figure out how to place lasso.png
+      content: "-lasso- "; //temp
+      font-size: 0.5rem; //temp
+    }
   }
 }
 
 //styling of last paragraph in requirements class
 //per our wireframe should be stand alone with leather background
+//This does not want to expand to full width in large view - Not sure why width is behaving oddly
 .requirements p:last-child {
   background-image: url(scss/assets/images/leather.jpg);
   height: 10em;
-  @include MQ(L) {
-    height: 10em;
-  }
   width: 100%;
-  max-width: $display-max-width;
   padding: 1em 0 2em 1.5em;
   position: relative;
   margin: 1rem 0 -1.5em 0;
@@ -260,7 +271,6 @@ header {
   }
 }
 
-//footer needs pushed to the bottom
 footer {
   background-image: url(scss/assets/images/Background.png);
   display: flex;
