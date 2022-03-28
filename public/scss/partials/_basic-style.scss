@@ -114,8 +114,9 @@ header {
     text-align: left;
   }
   p {
-    margin: 0 0 15px 1.5rem;
-    max-width: 90%;
+    margin: 0 5px 15px 1.5rem;
+    max-width: 100%;
+    padding-right: 20px;
   }
 }
 
@@ -170,6 +171,10 @@ header {
   li {
     line-height: 1.5em;
     margin: 0 1.5em 0 1.5em;
+    font-size: 1rem;
+    @include MQ(L) {
+      font-size: 1.5rem;
+    }
   }
   @include MQ(L) {
     display: grid; //grid for .sidebar in large view
@@ -200,12 +205,15 @@ header {
       }
     }
     li::before {
-      // NEED HELP HERE---> can get lasso to display but unable to resize - Marc
-      //content: url(scss/assets/images/lasso.png);
-      //max-width: 10%;
-      //height: auto;
-      font-size: 0.5rem; //temporary until we fix lasso.png
-      content: " -lasso- "; //temporary
+      // NEED HELP HERE---> can get lasso to display but having trouble positiong it. Have no idea how to put the text in the middle of a large lasso - Marc
+      content: "";
+      display: inline-block;
+      height: 1.8em;
+      width: 2em;
+      background-size: 2em 2em;
+      background-image: url(scss/assets/images/lasso.svg);
+      background-repeat: no-repeat;
+      //position: absolute;
     }
     li {
       @include MQ(L) {
@@ -215,21 +223,19 @@ header {
   }
   .design-archives {
     li::before {
-      //Marc - have been unable to resize or rotate sign
-      //content: url(scss/assets/images/sign.png);
-      //transform: rotate(
-      //180deg
-      //);
-      // temporary placeholder until we get sign.png working
-      content: "-wood arrow- "; //temp
-      font-size: 0.5rem; //temp
+      content: "";
+      display: inline-block;
+      height: 3.5em;
+      width: 5em;
+      background-size: 5em 5em;
+      background-image: url(scss/assets/images/sign.svg);
+      background-repeat: no-repeat;
     }
     @include MQ(L) {
       grid-row-start: 2;
     }
   }
 
-  //Need to place lasso.png
   .zen-resources {
     grid-column: 1/3;
     grid-row-start: 3;
@@ -248,9 +254,13 @@ header {
       }
     }
     li::before {
-      //Need to figure out how to place lasso.png
-      content: "-lasso- "; //temp
-      font-size: 0.5rem; //temp
+      content: "";
+      display: inline-block;
+      height: 2em;
+      width: 2em;
+      background-size: 2em 2em;
+      background-image: url(scss/assets/images/lasso.svg);
+      background-repeat: no-repeat;
     }
   }
 }

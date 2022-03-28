@@ -273,8 +273,9 @@ header {
   .participation p,
   .benefits p,
   .requirements p {
-    margin: 0 0 15px 1.5rem;
-    max-width: 90%; }
+    margin: 0 5px 15px 1.5rem;
+    max-width: 100%;
+    padding-right: 20px; }
 
 @media only screen and (min-width: 38em) {
   .page-wrapper {
@@ -316,7 +317,11 @@ header {
     display: none; }
   .sidebar li {
     line-height: 1.5em;
-    margin: 0 1.5em 0 1.5em; }
+    margin: 0 1.5em 0 1.5em;
+    font-size: 1rem; }
+    @media only screen and (min-width: 38em) {
+      .sidebar li {
+        font-size: 1.5rem; } }
   @media only screen and (min-width: 38em) {
     .sidebar {
       display: grid;
@@ -342,14 +347,24 @@ header {
         flex-direction: column;
         margin-bottom: 3em; } }
   .sidebar .design-selection li::before {
-    font-size: 0.5rem;
-    content: " -lasso- "; }
+    content: "";
+    display: inline-block;
+    height: 1.8em;
+    width: 2em;
+    background-size: 2em 2em;
+    background-image: url(scss/assets/images/lasso.svg);
+    background-repeat: no-repeat; }
   @media only screen and (min-width: 38em) {
     .sidebar .design-selection li {
       margin-bottom: 1em; } }
   .sidebar .design-archives li::before {
-    content: "-wood arrow- ";
-    font-size: 0.5rem; }
+    content: "";
+    display: inline-block;
+    height: 3.5em;
+    width: 5em;
+    background-size: 5em 5em;
+    background-image: url(scss/assets/images/sign.svg);
+    background-repeat: no-repeat; }
   @media only screen and (min-width: 38em) {
     .sidebar .design-archives {
       grid-row-start: 2; } }
@@ -370,8 +385,13 @@ header {
           flex-direction: column;
           line-height: 1em; } }
     .sidebar .zen-resources li::before {
-      content: "-lasso- ";
-      font-size: 0.5rem; }
+      content: "";
+      display: inline-block;
+      height: 2em;
+      width: 2em;
+      background-size: 2em 2em;
+      background-image: url(scss/assets/images/lasso.svg);
+      background-repeat: no-repeat; }
 
 .requirements p:last-child {
   background-image: url(scss/assets/images/leather.jpg);
