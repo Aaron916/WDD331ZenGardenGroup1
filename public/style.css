@@ -233,19 +233,25 @@ header {
   justify-content: center;
   background-image: url(scss/assets/images/leather.jpg);
   border-bottom: solid 5px #002e2c; }
-  @media only screen and (min-width: 38em) {
-    header {
-      height: 20em; } }
   header h1 {
+    font-size: 3em;
     transition: 1s;
     text-shadow: 3px 5px #002e2c;
     -webkit-text-stroke: 1px black;
     z-index: 11; }
   header h2 {
+    transition: 1s;
     position: absolute;
     bottom: 0;
     color: #002e2c;
     z-index: 11; }
+  @media only screen and (min-width: 38em) {
+    header {
+      height: 20em; }
+      header h2 {
+        font-size: 2em; }
+      header h1 {
+        font-size: 4em; } }
   header nav {
     display: inline-block; }
 
@@ -603,13 +609,23 @@ section {
   section:nth-of-type(1) h2::before {
     background-image: url(https://freesvg.org/img/Raseone_Horseshoe.png);
     background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
-    top: 50%;
-    left: -50%;
+    top: -20px;
     display: inline-block;
     width: 50px;
     height: 50px;
-    content: ""; }
+    content: "";
+    z-index: -1; }
+  @media only screen and (min-width: 38em) {
+    section:nth-of-type(1) h2::before {
+      background-size: 100px 100px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100px;
+      height: 100px;
+      top: -25px; } }
   section:nth-of-type(2) h2::before {
     content: "2. "; }
   section:nth-of-type(3) h2::before {

@@ -58,8 +58,28 @@ header {
   position: absolute;
   top: 0%;
   height: $header-height-S;
+  h1 {
+    font-size: 3em;
+    transition: 1s;
+    text-shadow: 3px 5px $color-4;
+    -webkit-text-stroke: 1px black;
+    z-index: 11;
+  }
+  h2 {
+    transition: 1s;
+    position: absolute;
+    bottom: 0;
+    color: $color-4;
+    z-index: 11;
+  }
   @include MQ(L) {
     height: $header-height-L;
+    h2 {
+      font-size:2em;
+    }
+    h1 {
+      font-size: 4em;
+    }
   }
   width: 100%;
   max-width: $display-max-width;
@@ -73,18 +93,6 @@ header {
   background-image: url(scss/assets/images/leather.jpg);
   border-bottom: solid 5px $color-4;
 
-  h1 {
-    transition: 1s;
-    text-shadow: 3px 5px $color-4;
-    -webkit-text-stroke: 1px black;
-    z-index: 11;
-  }
-  h2 {
-    position: absolute;
-    bottom: 0;
-    color: $color-4;
-    z-index: 11;
-  }
 
   nav {
     display: inline-block;
@@ -525,16 +533,30 @@ section {
   margin: 3em 0;
   @include clearfix;
   // HorseShoe
+  
   &:nth-of-type(1) h2::before {
     background-image: url(https://freesvg.org/img/Raseone_Horseshoe.png);
     background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
-    top: 50%;
-    left: -50%;
+    top: -20px;
     display: inline-block;
     width: 50px;
     height: 50px;
     content: "";
+    z-index:-1;
+  }
+
+  @include MQ(L) {
+    &:nth-of-type(1) h2::before {
+      background-size: 100px 100px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100px;
+      height: 100px;
+      top:-25px;
+    }
   }
 
   &:nth-of-type(2) h2::before {
