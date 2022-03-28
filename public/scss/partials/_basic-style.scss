@@ -199,15 +199,24 @@ header {
       grid-template-columns: 1fr 1fr;
       gap: 0.5em;
       margin-bottom: 1em;
+      -ms-content-zoom-snap-points: 6;
       @include MQ(L) {
         display: flex;
         flex-direction: column;
         margin-bottom: 3em;
       }
+      li {
+        position: relative;
+        z-index: 6;
+      }
     }
     li::before {
       // NEED HELP HERE---> can get lasso to display but having trouble positiong it. Have no idea how to put the text in the middle of a large lasso - Marc
       content: "";
+      position: relative;
+      left:25px; //Fixed your problem Marc, just change top and left to poisiton. -Aaron
+      top:7px;
+      z-index: -1;
       display: inline-block;
       height: 1.8em;
       width: 2em;

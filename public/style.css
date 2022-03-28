@@ -341,14 +341,22 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5em;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    -ms-content-zoom-snap-points: 6; }
     @media only screen and (min-width: 38em) {
       .sidebar .design-selection ul {
         display: flex;
         flex-direction: column;
         margin-bottom: 3em; } }
+    .sidebar .design-selection ul li {
+      position: relative;
+      z-index: 6; }
   .sidebar .design-selection li::before {
     content: "";
+    position: relative;
+    left: 25px;
+    top: 7px;
+    z-index: -1;
     display: inline-block;
     height: 1.8em;
     width: 2em;
