@@ -338,7 +338,7 @@ footer {
   @include MQ(L) {
     font-size: 1.3rem;
   }
-  a:first-child::before {
+  a:first-child {
     display: inline-block;
     margin-top: -3em;
     height: 4em;
