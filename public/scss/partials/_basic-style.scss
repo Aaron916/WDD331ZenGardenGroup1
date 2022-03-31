@@ -75,7 +75,7 @@ header {
   @include MQ(L) {
     height: $header-height-L;
     h2 {
-      font-size:2em;
+      font-size: 2em;
     }
     h1 {
       font-size: 4em;
@@ -92,7 +92,6 @@ header {
   justify-content: center;
   background-image: url(scss/assets/images/leather.jpg);
   border-bottom: solid 5px $color-4;
-
 
   nav {
     display: inline-block;
@@ -219,11 +218,10 @@ header {
       }
     }
     li::before {
-      // NEED HELP HERE---> can get lasso to display but having trouble positiong it. Have no idea how to put the text in the middle of a large lasso - Marc
       content: "";
       position: relative;
-      left:25px; //Fixed your problem Marc, just change top and left to poisiton. -Aaron
-      top:7px;
+      left: 3px;
+      top: 7px;
       z-index: -1;
       display: inline-block;
       height: 1.8em;
@@ -231,7 +229,6 @@ header {
       background-size: 2em 2em;
       background-image: url(scss/assets/images/lasso.svg);
       background-repeat: no-repeat;
-      //position: absolute;
     }
     li {
       @include MQ(L) {
@@ -240,14 +237,31 @@ header {
     }
   }
   .design-archives {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: -2em;
+      @include MQ(L) {
+        flex-direction: column;
+        margin-top: -3.5em;
+      }
+    }
     li::before {
       content: "";
+      position: relative;
+      left: 90px;
+      top: 14px;
+      z-index: 0;
       display: inline-block;
-      height: 3.5em;
-      width: 5em;
-      background-size: 5em 5em;
+      height: 8em;
+      width: 8em;
+      background-size: 8em 8em;
       background-image: url(scss/assets/images/sign.svg);
       background-repeat: no-repeat;
+    }
+    li {
+      margin: 0;
     }
     @include MQ(L) {
       grid-row-start: 2;
@@ -260,7 +274,10 @@ header {
     width: 100%;
     max-width: $display-max-width;
     padding: 1em 0 0.5em 0;
-    margin-top: 2em;
+    margin-top: 0;
+    @include MQ(L) {
+      margin-top: 1em;
+    }
     ul {
       display: flex;
       flex-direction: row;
@@ -268,17 +285,24 @@ header {
       font-size: 1rem;
       @include MQ(L) {
         flex-direction: column;
-        line-height: 1em;
       }
     }
     li::before {
       content: "";
+      position: relative;
+      left: 3px;
+      top: 7px;
       display: inline-block;
       height: 2em;
       width: 2em;
       background-size: 2em 2em;
       background-image: url(scss/assets/images/lasso.svg);
       background-repeat: no-repeat;
+    }
+    li {
+      @include MQ(L) {
+        line-height: 3em;
+      }
     }
   }
 }
@@ -294,26 +318,70 @@ header {
   position: relative;
   margin: 1rem 0 -1.5em 0;
   border-top: solid 5px $color-4;
+  border-bottom: solid 5px $color-4;
   a {
     color: black;
   }
 }
 
 footer {
-  background-image: url(scss/assets/images/Background.png);
+  background-image: url(scss/assets/images/leather.png);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  position: fixed;
-  z-index:1000;
-  bottom: 0px;
-  height: 2em;
+  margin-top: -2em;
+  z-index: 10;
   width: 100%;
   max-width: $display-max-width;
   padding: 0.5em 0 0.5em 0;
   font-size: 1rem;
   @include MQ(L) {
     font-size: 1.3rem;
+  }
+  a:first-child::before {
+    display: inline-block;
+    margin-top: -3em;
+    height: 4em;
+    width: 4em;
+    background-size: 4em 4em;
+    background-image: url(scss/assets/images/html-5.svg);
+    background-repeat: no-repeat;
+  }
+  a:nth-child(2) {
+    display: inline-block;
+    margin-top: -3em;
+    height: 4em;
+    width: 4em;
+    background-size: 4em 4em;
+    background-image: url(scss/assets/images/css-3.svg);
+    background-repeat: no-repeat;
+  }
+  a:nth-child(3) {
+    display: inline-block;
+    margin-top: -3em;
+    height: 4em;
+    width: 4em;
+    background-size: 4em 4em;
+    background-image: url(scss/assets/images/cc.svg);
+    background-repeat: no-repeat;
+  }
+  a:nth-child(4) {
+    display: inline-block;
+    margin-top: -3em;
+    height: 4em;
+    width: 4em;
+    background-size: 4em 4em;
+    background-image: url(scss/assets/images/accessability.svg);
+    background-repeat: no-repeat;
+  }
+  a:last-child {
+    display: inline-block;
+    margin-top: -3em;
+    height: 4em;
+    width: 4em;
+    background-size: 4em 4em;
+    background-image: url(scss/assets/images/github.svg);
+    background-repeat: no-repeat;
   }
 }
 //****************************************** imported code from styleguide
@@ -533,7 +601,7 @@ section {
   margin: 3em 0;
   @include clearfix;
   // HorseShoe
-  
+
   &:nth-of-type(1) h2::before {
     background-image: url(https://freesvg.org/img/Raseone_Horseshoe.png);
     background-size: 50px 50px;
@@ -545,7 +613,7 @@ section {
     width: 50px;
     height: 50px;
     content: "";
-    z-index:-1;
+    z-index: -1;
   }
 
   @include MQ(L) {
@@ -555,7 +623,7 @@ section {
       background-position: center;
       width: 100px;
       height: 100px;
-      top:-25px;
+      top: -25px;
     }
   }
 
