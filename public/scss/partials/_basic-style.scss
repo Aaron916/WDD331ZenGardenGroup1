@@ -150,19 +150,6 @@ header {
     }
   }
 
-  //Marc - tried to put in cowboyhat but it messes everything up in large view
-  //.summary::after {
-  //  content: "";
-  //  position: relative;
-  //  left: 135px;
-  //  top: -7px;
-  //  display: inline-block;
-  //  height: 11em;
-  //  width: 11em;
-  //  background-size: 11em 11em;
-  //  background-image: url(scss/assets/images/cowboyhat.svg);
-  //  background-repeat: no-repeat;
-  //}
   .preamble {
     //.intro is parent
     @include MQ(L) {
@@ -393,7 +380,7 @@ footer {
     color: rgba(0, 0, 0, 0);
   }
 }
-//****************************************** imported code from styleguide
+
 .cd-logo {
   display: inline-block;
   height: 100%;
@@ -671,14 +658,6 @@ section {
     content: "10. ";
   }
 
-  //  @include MQ(L) {
-  //    @include column(0.48);
-  //    margin: 0 4% 4em 0;
-  //
-  //    &:nth-of-type(2n) {
-  //      margin-right: 0;
-  //    }
-  //  }
 }
 
 /* xBranding section - basic style */
@@ -826,21 +805,6 @@ section {
 
     &::after {
       background: darken($color-5, 5%);
-    }
-  }
-
-  @include MQ(S) {
-    li {
-      @include column(0.19);
-      margin: 0 1.25% 1em 0;
-
-      &:nth-of-type(2n) {
-        margin-right: 1.25%;
-      }
-
-      &:nth-of-type(5n) {
-        margin-right: 0;
-      }
     }
   }
 }
