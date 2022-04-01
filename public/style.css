@@ -679,7 +679,8 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: -20px;
+    top: -15px;
+    left: -20px;
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -692,7 +693,8 @@ section {
       background-position: center;
       width: 100px;
       height: 100px;
-      top: -25px; } }
+      top: -25px;
+      left: -50px; } }
   section:nth-of-type(2) h2::before {
     content: "2. "; }
   section:nth-of-type(3) h2::before {
