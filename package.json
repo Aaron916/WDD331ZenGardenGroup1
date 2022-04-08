@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "sass:compile": "node-sass --include-path sass public/scss/style-guide.scss public/style.css"
   },
   "author": "Aaron Rooks",
