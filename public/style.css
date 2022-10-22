@@ -216,7 +216,7 @@ select {
   font-size: 1.6rem; }
 
 header::after {
-  content: url(scss/assets/images/zg.svg);
+  content: url(scss/assets/Images/zg.svg);
   position: absolute;
   width: 7em;
   z-index: 10; }
@@ -234,7 +234,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(public/scss/assets/images/leather.jpg);
+  background-image: url(public/scss/assets/Images/leather.jpg);
   border-bottom: solid 5px #002e2c; }
   header h1 {
     font-size: 3em;
@@ -370,7 +370,7 @@ header {
     height: 1.8em;
     width: 2em;
     background-size: 2em 2em;
-    background-image: url(scss/assets/images/lasso.svg);
+    background-image: url(scss/assets/Images/lasso.svg);
     background-repeat: no-repeat; }
   @media only screen and (min-width: 38em) {
     .sidebar .design-selection li {
@@ -394,7 +394,7 @@ header {
     height: 8em;
     width: 8em;
     background-size: 8em 8em;
-    background-image: url(scss/assets/images/sign.svg);
+    background-image: url(scss/assets/Images/sign.svg);
     background-repeat: no-repeat; }
   .sidebar .design-archives li {
     margin: 0; }
@@ -428,14 +428,14 @@ header {
       height: 2em;
       width: 2em;
       background-size: 2em 2em;
-      background-image: url(scss/assets/images/lasso.svg);
+      background-image: url(scss/assets/Images/lasso.svg);
       background-repeat: no-repeat; }
     @media only screen and (min-width: 38em) {
       .sidebar .zen-resources li {
         line-height: 3em; } }
 
 .requirements p:last-child {
-  background-image: url(scss/assets/images/leather.jpg);
+  background-image: url(scss/assets/Images/leather.jpg);
   height: 10em;
   width: 100%;
   padding: 1em 0 2em 1.5em;
@@ -447,7 +447,7 @@ header {
     color: black; }
 
 footer {
-  background-image: url(scss/assets/images/leather.png);
+  background-image: url(scss/assets/Images/leather.png);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -466,7 +466,7 @@ footer {
     height: 4em;
     width: 4em;
     background-size: 4em 4em;
-    background-image: url(scss/assets/images/html-5.svg);
+    background-image: url(scss/assets/Images/html-5.svg);
     background-repeat: no-repeat;
     color: rgba(0, 0, 0, 0); }
   footer a:nth-child(2) {
@@ -475,7 +475,7 @@ footer {
     height: 4em;
     width: 4em;
     background-size: 4em 4em;
-    background-image: url(scss/assets/images/css-3.svg);
+    background-image: url(scss/assets/Images/css-3.svg);
     background-repeat: no-repeat;
     color: rgba(0, 0, 0, 0); }
   footer a:nth-child(3) {
@@ -484,7 +484,7 @@ footer {
     height: 4em;
     width: 4em;
     background-size: 4em 4em;
-    background-image: url(scss/assets/images/cc.svg);
+    background-image: url(scss/assets/Images/cc.svg);
     background-repeat: no-repeat;
     color: rgba(0, 0, 0, 0); }
   footer a:nth-child(4) {
@@ -493,7 +493,7 @@ footer {
     height: 4em;
     width: 4em;
     background-size: 4em 4em;
-    background-image: url(scss/assets/images/accessability.svg);
+    background-image: url(scss/assets/Images/accessability.svg);
     background-repeat: no-repeat;
     color: rgba(0, 0, 0, 0); }
   footer a:last-child {
@@ -502,7 +502,7 @@ footer {
     height: 4em;
     width: 4em;
     background-size: 4em 4em;
-    background-image: url(scss/assets/images/github.svg);
+    background-image: url(scss/assets/Images/github.svg);
     background-repeat: no-repeat;
     color: rgba(0, 0, 0, 0); }
 
