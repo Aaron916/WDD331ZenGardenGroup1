@@ -387,8 +387,8 @@ header {
   .sidebar .design-archives li::before {
     content: "";
     position: relative;
-    left: 90px;
-    top: 14px;
+    left: 10px;
+    top: 55px;
     z-index: 0;
     display: inline-block;
     height: 8em;
